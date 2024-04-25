@@ -1,13 +1,13 @@
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Example of JSTL formatDate with pattern attribute</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Guru current Date</title>
 </head>
 <body>
-    <jsp:useBean id="now" class="java.util.Date" />
-    <fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss" var="formattedDate"/>
-    <p>The current date and time is: ${formattedDate}</p>
+Today's date: <%= (new java.util.Date()).toLocaleString()%>
 </body>
 </html>
